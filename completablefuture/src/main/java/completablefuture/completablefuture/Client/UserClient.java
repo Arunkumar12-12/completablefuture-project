@@ -20,7 +20,7 @@ public class UserClient {
 		return CompletableFuture.supplyAsync(()->{
 			return circuitBreakerFactory.create("userServiceCB")
 					.run(() -> {
-//						simulateSlowService();
+						simulateSlowService();
 						User user= new User();
 						user.setName("arun");
 						user.setAge(27);
